@@ -1,19 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    // int t;
-    // cin >> t;
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
 
-    int n;
-    cin >> n;
-        
-    int arr[3*n];
-    for(int i = 0; i < 3 * n; i++){
-        arr[i] = i + 1;
+        int l = 1, r = 3 * n;
+
+        while (l < r) {
+            cout << l << " " << r-1 << " " << r << " ";
+            l++;
+            r -= 2;
+        }
+        cout << "\n";
     }
-    for(int i = 0; i < 3 * n; i++){
-        cout << arr[i] << " ";
-    }
-    return 0;
 }
